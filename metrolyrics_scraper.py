@@ -19,7 +19,6 @@ class Scraper():
 
             verses = soup_data.findAll("p", {"class": "verse"})
             lyrics = ""
-
             for verse in verses:
                 lyrics += re.sub(r"<.*?>", "", str(verse)) + "\n"
 
